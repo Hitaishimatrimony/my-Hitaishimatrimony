@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head><title>Widowed Profiles</title></head>
+
+<body style="font-family:Arial;background:#f4f4f4;padding:20px;">
+
+<h2 style="text-align:center;color:#d63384;margin-bottom:20px;">Widowed Profiles</h2>
+
+<!-- FILTER BOX -->
+<div id="filterBox" 
+style="width:95%;margin:0 auto 20px auto;background:white;padding:15px;border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+    
+    <input id="searchName" placeholder="Search Name" 
+    style="padding:10px;border:1px solid #ccc;border-radius:8px;width:180px;font-size:14px;">
+
+    <input id="minAge" type="number" placeholder="Min Age"
+    style="padding:10px;border:1px solid #ccc;border-radius:8px;width:120px;font-size:14px;">
+
+    <input id="maxAge" type="number" placeholder="Max Age"
+    style="padding:10px;border:1px solid #ccc;border-radius:8px;width:120px;font-size:14px;">
+
+    <input id="cityFilter" placeholder="City"
+    style="padding:10px;border:1px solid #ccc;border-radius:8px;width:160px;font-size:14px;">
+
+    <button onclick="resetFilters()" 
+    style="background:#d63384;color:white;padding:10px 18px;border:none;border-radius:8px;font-weight:bold;">
+        Reset
+    </button>
+</div>
+
+<div id="profiles" 
+style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;"></div>
+
+<script>
+let allProfiles = [];
+
+async function loadProfiles() {
+    const res = await fetch("http://localhost:5000/api/profiles/widowed");
+    const data = await res.json();
+    allProfiles = data.data;
+    displayProfiles(allProfiles);
+}
+
+function displayProfiles(list) {
+    const box = document.getElementById("profiles");
+    box.innerHTML = "";
+
+    list.forEach(p => {
+        let img = p.profileImage?.length > 50 ? p.profileImage :
+            "https://via.placeholder.com/260x180?text=No+Image";
+
+        let age = calculateAge(p.dob);
+
+        const card = document.createElement("div");
+        card.style = `
+            width:260px;background:white;padding:15px;border-radius:12px;
+            box-shadow:0 3px 8px rgba(0,0,0,0.15);cursor:pointer;
+            transition:transform .2s;
+        `;
+        card.innerHTML = `
+            <img src="${img}" style="width:100%;height:180px;border-radius:10px;object-fit:cover;">
+            <p style="font-size:18px;color:#d63384;font-weight:bold;margin-top:8px;">
+                ${p.firstName} ${p.lastName}
+            </p>
+            <p><b>Age:</b> ${age}</p>
+            <p><b>City:</b> ${p.city}</p>
+            <p><b>Profession:</b> ${p.profession}</p>
+        `;
+
+        card.onclick = () => location.href = `single_profile.html?id=${p.id}`;
+        box.appendChild(card);
+    });
+}
+
+function calculateAge(dob) {
+    const birth = new Date(dob);
+    return Math.floor((Date.now() - birth) / (365.25 * 24 * 3600 * 1000));
+}
+
+function applyFilters() {
+    let name = searchName.value.toLowerCase();
+    let min = parseInt(minAge.value);
+    let max = parseInt(maxAge.value);
+    let city = cityFilter.value.toLowerCase();
+
+    let filtered = allProfiles.filter(p => {
+        let age = calculateAge(p.dob);
+        return (!name || (p.firstName + " " + p.lastName).toLowerCase().includes(name)) &&
+               (!min || age >= min) &&
+               (!max || age <= max) &&
+               (!city || (p.city || "").toLowerCase().includes(city));
+    });
+
+    displayProfiles(filtered);
+}
+
+function resetFilters() {
+    searchName.value = "";
+    minAge.value = "";
+    maxAge.value = "";
+    cityFilter.value = "";
+    displayProfiles(allProfiles);
+}
+
+document.querySelectorAll("#filterBox input").forEach(e => 
+    e.addEventListener("input", applyFilters)
+);
+
+loadProfiles();
+</script>
+
+</body>
+</html>                          

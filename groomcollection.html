@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4jodi Matrimony - Find Your Perfect Life Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; color: #333; background-color: #f9f9f9;width: 100%;">
+  
+
+<!-- Contact Info Bar -->
+<div style="position: fixed; top: 0; left: 0; width: 100%; background-color: mediumspringgreen; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; font-family: Arial, sans-serif; font-size: 18px; z-index: 3000; height: 35px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+  <div style="display: flex; align-items: center; gap: 20px;">
+    <span style="display: flex; align-items: center;" class="desktop-only">
+      <i class="fas fa-map-marker-alt" style="color: maroon; margin-right: 5px;"></i>
+      <span style="color: black;">Hyderabad, Mumbai, Delhi, Bangalore</span>
+    </span>
+    <a href="tel:9908793602" style="display: flex; align-items: center; text-decoration: none; margin-right: 15px;" class="desktop-only">
+      <i class="fas fa-phone-alt" style="color: maroon; margin-right: 5px;"></i>
+      <span style="color: black;">9908793602</span>
+    </a>
+    <a href="mailto:Hitaishimatrimony@gmail.com" style="display: flex; align-items: center; text-decoration: none;" class="desktop-only">
+      <i class="fas fa-envelope" style="color: maroon; margin-right: 5px;"></i>
+      <span style="color: black;">opticjodi@gmail.com</span>
+    </a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 25px; margin-right: 50px;" class="desktop-only">
+    <a href="https://www.whatsapp.com/" style="color: maroon; font-size: 40px;" onmouseenter="this.style.color='green';" onmouseleave="this.style.color='maroon';"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.linkedin.com/in/hitaishi-matrimony" style="color: maroon; font-size: 40px;" onmouseenter="this.style.color='#0077b5';" onmouseleave="this.style.color='maroon';"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.instagram.com/hita.ishimatrimony/?hl=en" style="color: maroon; font-size: 20px;" onmouseenter="this.style.color='#e1306c';" onmouseleave="this.style.color='maroon';"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@Hitaishimatrimony" style="color: maroon; font-size: 40px;" onmouseenter="this.style.color='red';" onmouseleave="this.style.color='maroon';"><i class="fab fa-youtube"></i></a>
+    <a href="https://x.com/matrimonyhitais" style="color: maroon; font-size: 40px;" onmouseenter="this.style.color='black';" onmouseleave="this.style.color='maroon';"><i class="fab fa-twitter"></i></a>
+    <a href="createprofile.html" style="background-color: maroon; color: white; padding: 6px 15px; text-decoration: none; border-radius: 4px; font-size: 18px; font-weight: bold;" onmouseenter="this.style.backgroundColor='darkred'; this.style.transform='scale(1.05)'; this.style.transition='all 0.3s ease';" onmouseleave="this.style.backgroundColor='maroon'; this.style.transform='scale(1)';">Create Profile</a>
+  </div>
+  
+  <!-- Mobile Top Bar -->
+  <div class="mobile-top-bar" style="display: none; width: 100%; justify-content: space-between; align-items: center;">
+    <a href="tel:9908793602" style="display: flex; align-items: center; text-decoration: none;">
+      <i class="fas fa-phone-alt" style="color: maroon; margin-right: 5px;"></i>
+    </a>
+    <a href="mailto:Hitaishimatrimony@gmail.com" style="display: flex; align-items: center; text-decoration: none;">
+      <i class="fas fa-envelope" style="color: maroon; margin-right: 5px;"></i>
+    </a>
+    <a href="createprofile.html" style="background-color: maroon; color: white; padding: 6px 15px; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: bold;">Create Profile</a>
+    <button id="mobileMenuBtn" onclick="toggleMobileTopMenu()" style="background:none; border:none; font-size:24px; color:maroon; cursor:pointer;">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Mobile Top Menu (Hidden by default) -->
+<div id="mobileTopMenu" style="display: none; position: fixed; top: 35px; left: 0; width: 100%; background-color: mediumspringgreen; z-index: 3001; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); flex-direction: column; align-items: center;">
+  <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 15px;">
+    <a href="https://www.whatsapp.com/" style="color: maroon; font-size: 30px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.linkedin.com/in/hitaishi-matrimony" style="color: maroon; font-size: 30px;"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.instagram.com/hita.ishimatrimony/?hl=en" style="color: maroon; font-size: 30px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@Hitaishimatrimony" style="color: maroon; font-size: 30px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://x.com/matrimonyhitais" style="color: maroon; font-size: 30px;"><i class="fab fa-twitter"></i></a>
+  </div>
+  
+</div>
+
+<!-- Main Header -->
+<header id="mainHeader" style="position: fixed; top: 50px; left: 0; width: 100%; height: 100px; background-color: #e83e8c; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; display: flex; align-items: center; padding: 0 15px;">
+  <!-- Logo -->
+  <div style="flex: 0 0 120px; margin-right: 10px;">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Hitaishi Matrimony Logo" style="height: 80px; width: auto; padding-left: 0px; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+    </a>
+  </div>
+  <!-- Title & Tagline -->
+  <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <h1 style="margin: 0; font-size: 40px; color: white; white-space: nowrap; margin-left: 100px; margin-top: 0%;">Welcome to 4jodi Matrimony</h1>
+      <span style="font-size: 9px; background-color: red; color: white; padding: 2px 5px; border-radius: 10px; flex-shrink: 0; margin-top: 10px;">Trusted since 2023</span>
+    </div>
+    <!-- Main Navigation -->
+    <nav id="topNav" style="display: flex; flex-wrap: wrap; gap: 50px; margin-left: 95px; margin-top: 8px;">
+      <a href="index.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Home</a>
+      <a href="male2.html" style="color: white; text-decoration: none;font-size: 18px; white-space: nowrap;">Male</a>
+      <a href="female.html" style="color: white; text-decoration: none;font-size: 18px; white-space: nowrap;">Female</a>
+        <a href="dating.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">community connect</a>
+      <a href="dating.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Dating</a>
+      <a href="co-living.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Co-living</a>
+      <a href="friendship.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Friendship</a>
+      <a href="secondmarriage.html" style="color: white; text-decoration: none;  font-size: 18px; white-space: nowrap;">Second marriage</a>
+      <a href="widows.html" style="color: white; text-decoration: none;font-size: 18px; white-space: nowrap;">Widows</a>
+      <a href="marriage affiliate.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Marriage Affiliates</a>
+      <a href="marriage broker.html" style="color: white; text-decoration: none;  font-size: 18px; white-space: nowrap;">Marriage Brokers</a>
+    </nav>
+  </div>
+  <!-- Top Navigation Links -->
+  <nav id="topNav" style="position: absolute; top: 10px; right: 35px; display: flex; justify-content: flex-end; align-items: center; gap: 50px;">
+    <a href="nri2.html" style="color: rgb(255, 255, 255); text-decoration: none; font-size: 18px; white-space: nowrap;">NRI</a>
+    <a href="contactus.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Contact us</a>
+    <a href="services2.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Services</a>
+    <a href="membership.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Membership</a>
+    <a href="successstories.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Success Stories</a>
+    <a href="login.html" style="color: white; text-decoration: none; font-size: 18px; white-space: nowrap;">Login/Register</a>
+  </nav>
+  <!-- Mobile Menu Button -->
+  <button id="menuBtn" onclick="toggleMobileMenu()" style="display:none; position:absolute; right:15px; top:15px; background:none; border:none; font-size:32px; color:white; cursor:pointer; z-index:2001;">&#8942;</button>
+</header>
+
+<script>
+  // Toggle mobile top menu (social links and top nav)
+  function toggleMobileTopMenu() {
+    var mobileMenu = document.getElementById('mobileTopMenu');
+    if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+      mobileMenu.style.display = 'flex';
+    } else {
+      mobileMenu.style.display = 'none';
+    }
+  }
+
+  // Toggle main mobile menu (main navigation)
+  function toggleMobileMenu() {
+    var nav = document.getElementById('mainNav');
+    var topNav = document.getElementById('topNav');
+    
+    if (nav.style.display === 'none' || nav.style.display === '') {
+      // Open mobile menu
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '100px';
+      nav.style.left = '0';
+      nav.style.width = '100%';
+      nav.style.background = '#e83e8c';
+      nav.style.zIndex = '2000';
+      nav.style.marginLeft = '0';
+      nav.style.gap = '0';
+      nav.style.padding = '10px 0';
+      
+      Array.from(nav.children).forEach(a => {
+        a.style.borderBottom = '1px solid #fff';
+        a.style.padding = '15px 0';
+        a.style.fontSize = '18px';
+        a.style.textAlign = 'center';
+        a.style.background = 'none';
+        a.style.borderRadius = '0';
+        a.style.width = '100%';
+      });
+    } else {
+      // Close mobile menu
+      nav.style.display = 'none';
+    }
+  }
+
+  // Handle screen resize
+  function handleResize() {
+    var menuBtn = document.getElementById('menuBtn');
+    var nav = document.getElementById('mainNav');
+    var topNav = document.getElementById('topNav');
+    var mobileTopBar = document.querySelector('.mobile-top-bar');
+    var desktopElements = document.querySelectorAll('.desktop-only');
+    var mobileTopMenu = document.getElementById('mobileTopMenu');
+    
+    if (window.innerWidth <= 700) {
+      // Mobile view
+      menuBtn.style.display = 'block';
+      nav.style.display = 'none';
+      topNav.style.display = 'none';
+      mobileTopBar.style.display = 'flex';
+      mobileTopMenu.style.display = 'none';
+      
+      // Hide desktop elements
+      desktopElements.forEach(el => {
+        el.style.display = 'none';
+      });
+    } else {
+      // Desktop view
+      menuBtn.style.display = 'none';
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'row';
+      nav.style.position = 'relative';
+      nav.style.top = '';
+      nav.style.left = '';
+      nav.style.width = '';
+      nav.style.background = '';
+      nav.style.zIndex = '';
+      nav.style.marginLeft = '95px';
+      nav.style.gap = '50px';
+      nav.style.padding = '';
+      
+      Array.from(nav.children).forEach(a => {
+        a.style.borderBottom = '';
+        a.style.padding = '5px 10px';
+        a.style.fontSize = '18px';
+        a.style.textAlign = '';
+        a.style.background = '#ff69b4';
+        a.style.borderRadius = '5px';
+        a.style.width = '';
+      });
+      
+      topNav.style.display = 'flex';
+      topNav.style.flexDirection = 'row';
+      topNav.style.position = 'absolute';
+      topNav.style.top = '10px';
+      topNav.style.right = '35px';
+      topNav.style.gap = '50px';
+      
+      mobileTopBar.style.display = 'none';
+      mobileTopMenu.style.display = 'none';
+      
+      // Show desktop elements
+      desktopElements.forEach(el => {
+        el.style.display = 'flex';
+      });
+    }
+  }
+
+  window.addEventListener('resize', handleResize);
+  window.addEventListener('DOMContentLoaded', handleResize);
+</script>
+
+<style>
+/* Media Queries for Responsiveness */
+@media (max-width: 1000px) {
+    #mainHeader {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    #mainHeader h1 {
+        font-size: 20px;
+        margin-left: 5px;
+    }
+    #mainHeader .logo div {
+        flex: 0 0 100px;
+    }
+    #mainHeader .logo img {
+        height: 40px;
+    }
+    #mainHeader nav a {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    #mainHeader nav[style*="position: absolute"] a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 700px) {
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .mobile-top-bar {
+    display: flex !important;
+  }
+  
+  #mainHeader {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 10px !important;
+    min-width: 100vw !important;
+    align-items: flex-start !important;
+  }
+  
+  #mainHeader > div {
+    margin: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  #mainHeader h1 {
+    font-size: 18px !important;
+    margin: 10px 0 0 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  
+  #mainNav {
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin: 10px 0 0 0 !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+  
+  #mainNav a {
+    font-size: 15px !important;
+    padding: 10px 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    background-color: #ff69b4 !important;
+    border-bottom: 1px solid #e83e8c !important;
+  }
+  
+  #topNav {
+    position: static !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+  
+  #topNav a {
+    background: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #e83e8c !important;
+    color: white !important;
+    font-size: 15px !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+</style>
+
+
+    <!-- Header Section -->
+    <header style="background-color: #1a1a2e; color: white; padding: 20px 0; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <h1 style="margin: 0; font-size: 2.5em;">Royal Groom Collections</h1>
+        <p style="margin: 5px 0 0; font-size: 1.2em; color: #e6e6e6;">Premium Wedding Attire for the Distinguished Groom</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav style="background-color: #16213e; padding: 15px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap;">
+            <a href="#traditional" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">Traditional</a>
+            <a href="#contemporary" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">Contemporary</a>
+            <a href="#sherwani" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">Sherwanis</a>
+            <a href="#accessories" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">Accessories</a>
+            <a href="#contact" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; height: 500px; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
+        <div>
+            <h2 style="font-size: 3em; margin-bottom: 20px;">Elegance Redefined</h2>
+            <p style="font-size: 1.5em; max-width: 800px; margin: 0 auto 30px;">Discover our exclusive collection of premium groom wear for your special day</p>
+            <button style="background-color: #e94560; color: white; border: none; padding: 12px 30px; font-size: 1.1em; border-radius: 30px; cursor: pointer; transition: background-color 0.3s;">View Collections</button>
+        </div>
+    </section>
+
+    <!-- Traditional Collection -->
+    <section id="traditional" style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 40px; color: #1a1a2e; border-bottom: 2px solid #e94560; display: inline-block; padding-bottom: 10px;">Traditional Collections</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+            <!-- Item 1 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Royal Blue Sherwani" style="width: 100%; height: 300px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-top: 0; color: #1a1a2e;">Royal Blue Silk Sherwani</h3>
+                    <p style="color: #666;">Handcrafted with intricate zari work and premium silk fabric.</p>
+                    <p style="font-weight: bold; color: #e94560; font-size: 1.2em;">₹12,999</p>
+                    <button style="background-color: #1a1a2e; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; width: 100%;">View Details</button>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Maroon Sherwani" style="width: 100%; height: 300px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-top: 0; color: #1a1a2e;">Maroon Velvet Sherwani</h3>
+                    <p style="color: #666;">Luxurious velvet with golden embroidery for a regal look.</p>
+                    <p style="font-weight: bold; color: #e94560; font-size: 1.2em;">₹15,499</p>
+                    <button style="background-color: #1a1a2e; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; width: 100%;">View Details</button>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Beige Jodhpuri" style="width: 100%; height: 300px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-top: 0; color: #1a1a2e;">Beige Jodhpuri Suit</h3>
+                    <p style="color: #666;">Classic Jodhpuri cut with modern styling and premium fabric.</p>
+                    <p style="font-weight: bold; color: #e94560; font-size: 1.2em;">₹10,999</p>
+                    <button style="background-color: #1a1a2e; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; width: 100%;">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contemporary Collection -->
+    <section id="contemporary" style="padding: 60px 20px; max-width: 1200px; margin: 0 auto; background-color: #f0f0f0;">
+        <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 40px; color: #1a1a2e; border-bottom: 2px solid #e94560; display: inline-block; padding-bottom: 10px;">Contemporary Collections</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+            <!-- Item 1 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Black Tuxedo" style="width: 100%; height: 300px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-top: 0; color: #1a1a2e;">Premium Black Tuxedo</h3>
+                    <p style="color: #666;">Italian wool tuxedo with satin lapels for a sophisticated look.</p>
+                    <p style="font-weight: bold; color: #e94560; font-size: 1.2em;">₹18,999</p>
+                    <button style="background-color: #1a1a2e; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; width: 100%;">View Details</button>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Navy Blue Suit" style="width: 100%; height: 300px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-top: 0; color: #1a1a2e;">Navy Blue Wedding Suit</h3>
+                    <p style="color: #666;">Tailored fit suit with peak lapels for a modern groom.</p>
+                    <p style="font-weight: bold; color: #e94560; font-size: 1.2em;">₹14,499</p>
+                    <button style="background-color: #1a1a2e; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; width: 100%;">View Details</button>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Gray Suit" style="width: 100%; height: 300px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-top: 0; color: #1a1a2e;">Charcoal Gray Three-Piece</h3>
+                    <p style="color: #666;">Elegant three-piece suit with waistcoat for formal weddings.</p>
+                    <p style="font-weight: bold; color: #e94560; font-size: 1.2em;">₹16,999</p>
+                    <button style="background-color: #1a1a2e; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; width: 100%;">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sherwani Collection -->
+    <section id="sherwani" style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 40px; color: #1a1a2e; border-bottom: 2px solid #e94560; display: inline-block; padding-bottom: 10px;">Sherwani Collections</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+            <!-- Item 1 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <img src="https://images.unsplash.com/photo-1600188769045-bc60235283d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="White Sherwani" style="width: 100%; height: 300px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-top: 0; color: #1a1a2e;">Ivory Silk Sherwani</h3>
+                    <p style="color: #666;">Pure silk with silver embroidery for a royal appearance.</p>
+                    <p style="font-weight: bold; color: #e94560; font-size: 1.2em;">₹22,999</p>
+                    <button style="background-color: #1a1a2e; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; width: 100%;">View Details</button>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Gold Sherwani" style="width: 100%; height: 300px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-top: 0; color: #1a1a2e;">Golden Threadwork Sherwani</h3>
+                    <p style="color: #666;">Heavy gold zari work on premium fabric for the main ceremony.</p>
+                    <p style="font-weight: bold; color: #e94560; font-size: 1.2em;">₹25,999</p>
+                    <button style="background-color: #1a1a2e; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; width: 100%;">View Details</button>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+                <img src="https://images.unsplash.com/photo-1561526116-e2460f4d40a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Red Sherwani" style="width: 100%; height: 300px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-top: 0; color: #1a1a2e;">Ruby Red Bandhgala Sherwani</h3>
+                    <p style="color: #666;">Traditional bandhgala with modern cuts and embellishments.</p>
+                    <p style="font-weight: bold; color: #e94560; font-size: 1.2em;">₹19,999</p>
+                    <button style="background-color: #1a1a2e; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; width: 100%;">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section id="accessories" style="padding: 60px 20px; max-width: 1200px; margin: 0 auto; background-color: #f0f0f0;">
+        <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 40px; color: #1a1a2e; border-bottom: 2px solid #e94560; display: inline-block; padding-bottom: 10px;">Groom Accessories</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; margin-top: 40px;">
+            <!-- Item 1 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; padding: 20px;">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Safa" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+                <h3 style="margin: 15px 0 5px; color: #1a1a2e;">Designer Safa</h3>
+                <p style="font-weight: bold; color: #e94560; font-size: 1.1em;">₹2,499 - ₹5,999</p>
+            </div>
+            
+            <!-- Item 2 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; padding: 20px;">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Moje" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+                <h3 style="margin: 15px 0 5px; color: #1a1a2e;">Traditional Mojris</h3>
+                <p style="font-weight: bold; color: #e94560; font-size: 1.1em;">₹1,999 - ₹4,499</p>
+            </div>
+            
+            <!-- Item 3 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; padding: 20px;">
+                <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Watch" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+                <h3 style="margin: 15px 0 5px; color: #1a1a2e;">Luxury Watches</h3>
+                <p style="font-weight: bold; color: #e94560; font-size: 1.1em;">₹5,999 - ₹25,999</p>
+            </div>
+            
+            <!-- Item 4 -->
+            <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; padding: 20px;">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tie" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+                <h3 style="margin: 15px 0 5px; color: #1a1a2e;">Premium Ties & Cufflinks</h3>
+                <p style="font-weight: bold; color: #e94560; font-size: 1.1em;">₹999 - ₹3,999</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 60px 20px; background-color: #1a1a2e; color: white;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 40px; border-bottom: 2px solid #e94560; display: inline-block; padding-bottom: 10px;">Contact Us</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; margin-top: 40px;">
+                <div>
+                    <h3 style="color: #e94560;">Visit Our Store</h3>
+                    <p>123 Wedding Plaza, Fashion Street</p>
+                    <p>Mumbai, Maharashtra 400001</p>
+                    <p>India</p>
+                    
+                    <h3 style="color: #e94560; margin-top: 30px;">Contact Info</h3>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Email: info@royalgroomcollections.com</p>
+                </div>
+                
+                <div>
+                    <h3 style="color: #e94560;">Business Hours</h3>
+                    <p>Monday - Friday: 10:00 AM - 8:00 PM</p>
+                    <p>Saturday: 10:00 AM - 9:00 PM</p>
+                    <p>Sunday: 11:00 AM - 7:00 PM</p>
+                    
+                    <h3 style="color: #e94560; margin-top: 30px;">Follow Us</h3>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: white; font-size: 1.5em;">Facebook</a>
+                        <a href="#" style="color: white; font-size: 1.5em;">Instagram</a>
+                        <a href="#" style="color: white; font-size: 1.5em;">Twitter</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="color: #e94560;">Book an Appointment</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 4px; border: none;">
+                        <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 4px; border: none;">
+                        <input type="tel" placeholder="Phone Number" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 4px; border: none;">
+                        <textarea placeholder="Your Message" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 4px; border: none; height: 100px;"></textarea>
+                        <button type="submit" style="background-color: #e94560; color: white; border: none; padding: 12px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #0f0f1a; color: #aaa; text-align: center; padding: 30px 20px;">
+        <p>© 2023 Royal Groom Collections. All Rights Reserved.</p>
+        <p style="margin-top: 15px; font-size: 0.9em;">Premium Wedding Attire for Grooms | Matrimony Services | Custom Tailoring Available</p>
+    </footer>
+
+</body>
+</html>

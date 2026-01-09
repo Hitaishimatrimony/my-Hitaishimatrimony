@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4jodi Matrimony - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; color: #333; background-color: #f9f9f9; width: 100%; min-height: 100vh; display: flex; justify-content: center; align-items: center;">
+
+ 
+ 
+  <!-- Enhanced Navigation Bar -->
+    <nav style="position: fixed; top: 0; left: 0; width: 100%; background: linear-gradient(to right, #00FA9A, #00CD66); z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <!-- Top Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,0.3);">
+            <!-- Logo/Brand -->
+            <div style="display: flex; align-items: center;">
+                <div style="background: #8B0000; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-weight: bold; font-size: 20px;">
+                    H
+                </div>
+                <span style="font-weight: bold; font-size: 20px; color: #8B0000;">Hitaishi Matrimony</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="desktop-menu" style="display: flex; align-items: center; gap: 25px;">
+                <div style="display: flex; gap: 15px;">
+                    <a href="tel:9908793602" style="display: flex; align-items: center; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;" onmouseenter="this.style.color='#8B0000'" onmouseleave="this.style.color='#333'">
+                        <i class="fas fa-phone-alt" style="color: #8B0000; margin-right: 5px;"></i>
+                        <span>9908793602</span>
+                    </a>
+                    <a href="mailto:hitaishimatrimony@gmail.com" style="display: flex; align-items: center; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;" onmouseenter="this.style.color='#8B0000'" onmouseleave="this.style.color='#333'">
+                        <i class="fas fa-envelope" style="color: #8B0000; margin-right: 5px;"></i>
+                        <span>Hitaishimatrimony@gmail.com</span>
+                    </a>
+                </div>
+                
+                <a href="login2.html" class="desktop-profile-btn" style="background: #8B0000; color: white; padding: 8px 20px; text-decoration: none; border-radius: 30px; font-weight: bold; transition: all 0.3s; box-shadow: 0 2px 5px rgba(139,0,0,0.3);" onmouseenter="this.style.background='#A52A2A'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(139,0,0,0.4)'" onmouseleave="this.style.background='#8B0000'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(139,0,0,0.3)'">
+                  Login
+                </a>
+            </div>
+            
+            <!-- Mobile Right Section -->                   
+            <div class="mobile-right" style="display: none; align-items: center; gap: 15px;">
+                <a href="createprofile.html" class="mobile-profile-btn" style="background: #8B0000; color: white; padding: 6px 15px; text-decoration: none; border-radius: 20px; font-weight: bold; font-size: 14px; transition: all 0.3s; box-shadow: 0 2px 5px rgba(139,0,0,0.3);" onmouseenter="this.style.background='#A52A2A'; this.style.transform='scale(1.05)'" onmouseleave="this.style.background='#8B0000'; this.style.transform='scale(1)'">
+                    Create Profile
+                </a>
+                
+                <button id="menuToggle" style="background: none; border: none; font-size: 24px; color: #8B0000; cursor: pointer;">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Bottom Bar with Social Links -->
+        <!-- <div class="desktop-menu" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+            <div style="display: flex; align-items: center;">
+                <i class="fas fa-map-marker-alt" style="color: #8B0000; margin-right: 8px;"></i>
+                <span style="color: #333;">Hyderabad, Mumbai, Delhi, Bangalore</span>
+            </div>
+            
+            <div style="display: flex; gap: 20px;">
+                <a href="https://www.whatsapp.com/" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#25D366'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/hitaishi-matrimony" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#0077B5'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/hita.ishimatrimony/?hl=en" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#E1306C'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@Hitaishimatrimony" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#FF0000'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://x.com/matrimonyhitais" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#1DA1F2'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div> -->
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" style="display: none; background: white; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- Contact Info -->
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <div style="display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <i class="fas fa-map-marker-alt" style="color: #8B0000; width: 30px; font-size: 18px;"></i>
+                        <span>Hyderabad, Mumbai, Delhi, Bangalore</span>
+                    </div>
+                    <a href="tel:9908793602" style="display: flex; align-items: center; text-decoration: none; color: #333; padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <i class="fas fa-phone-alt" style="color: #8B0000; width: 30px; font-size: 18px;"></i>
+                        <span>9908793602</span>
+                    </a>
+                    <a href="mailto:opticjodi@gmail.com" style="display: flex; align-items: center; text-decoration: none; color: #333; padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <i class="fas fa-envelope" style="color: #8B0000; width: 30px; font-size: 18px;"></i>
+                        <span>opticjodi@gmail.com</span>
+                    </a>
+                </div>
+                
+                <!-- Social Links -->
+                <div>
+                    <h3 style="color: #8B0000; margin-bottom: 15px; font-size: 18px;">Follow Us</h3>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="https://www.whatsapp.com/" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#25D366'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hitaishi-matrimony" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#0077B5'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/hita.ishimatrimony/?hl=en" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#E1306C'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Hitaishimatrimony" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#FF0000'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://x.com/matrimonyhitais" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#1DA1F2'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const desktopMenu = document.querySelectorAll('.desktop-menu');
+            const desktopProfileBtn = document.querySelector('.desktop-profile-btn');
+            const mobileRight = document.querySelector('.mobile-right');
+            
+            // Function to check screen size and toggle menu visibility
+            function checkScreenSize() {
+                if (window.innerWidth <= 768) {
+                    // Mobile view
+                    mobileRight.style.display = 'flex';
+                    desktopMenu.forEach(el => {
+                        el.style.display = 'none';
+                    });
+                    desktopProfileBtn.style.display = 'none';
+                } else {
+                    // Desktop view
+                    mobileRight.style.display = 'none';
+                    mobileMenu.style.display = 'none';
+                    desktopMenu.forEach(el => {
+                        el.style.display = 'flex';
+                    });
+                    desktopProfileBtn.style.display = 'block';
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+            
+            // Toggle mobile menu
+            menuToggle.addEventListener('click', function() {
+                if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+                    mobileMenu.style.display = 'block';
+                    menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    mobileMenu.style.display = 'none';
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+            
+            // Initialize on page load
+            checkScreenSize();
+            
+            // Update on window resize
+            window.addEventListener('resize', checkScreenSize);
+        });
+    </script>
+
+<header id="mainHeader"
+style="position: fixed; top: 55px; left: 0; width: 100%; background: #e83e8c; color: white;
+padding: 10px 20px; z-index: 1000; display: flex; align-items: center; justify-content: space-between;
+box-sizing: border-box; flex-wrap: nowrap;">
+
+    <!-- LOGO -->
+    <div style="flex:0 0 auto; display:flex; align-items:center;">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo"
+            style="height:60px; width:auto; max-width:100%; object-fit:contain;">
+        </a>
+    </div>
+
+    <!-- TITLE + MAIN NAV -->
+    <div style="flex:1; min-width:0; padding:0 20px; display:flex; flex-direction:column;">
+
+        <!-- TITLE -->
+        <h1 style="margin:0; font-size:2vw; min-font-size:22px; color:white; white-space:nowrap;
+        overflow:hidden; text-overflow:ellipsis;">
+            Welcome to 4jodi Matrimony
+        </h1>
+
+        <span style="font-size:12px; background:red; padding:2px 6px; width:max-content;
+        border-radius:10px;">
+            Trusted since 2023
+        </span>
+
+        <!-- MAIN NAVIGATION -->
+        <nav id="mainNav"
+        style="display:flex; flex-wrap:wrap; gap:20px; padding-top:8px;">
+
+            <a href="index.html" style="color:white;text-decoration:none;font-size:16px;">Home</a>
+            <a href="male2.html" style="color:white;text-decoration:none;font-size:16px;">Male</a>
+            <a href="female.html" style="color:white;text-decoration:none;font-size:16px;">Female</a>
+            <a href="communityconnect.html" style="color:white;text-decoration:none;font-size:16px;">Community</a>
+            <a href="dating.html" style="color:white;text-decoration:none;font-size:16px;">Dating</a>
+            <a href="co-living.html" style="color:white;text-decoration:none;font-size:16px;">Co-living</a>
+            <a href="friendship.html" style="color:white;text-decoration:none;font-size:16px;">Friendship</a>
+            <a href="secondmarriage.html" style="color:white;text-decoration:none;font-size:16px;">Second marriage</a>
+            <a href="widows.html" style="color:white;text-decoration:none;font-size:16px;">Widows</a>
+            <a href="marriage affiliate.html" style="color:white;text-decoration:none;font-size:16px;">Marriage Affiliates</a>
+            <a href="marriage broker.html" style="color:white;text-decoration:none;font-size:16px;">Marriage Brokers</a>
+
+        </nav>
+    </div>
+
+    <!-- TOP RIGHT NAV -->
+    <nav id="topNav"
+    style="flex:0 0 auto; display:flex; gap:20px;">
+
+        <a href="nri2.html" style="color:white;text-decoration:none;">NRI</a>
+        <a href="contactus.html" style="color:white;text-decoration:none;">Contact</a>
+        <a href="services2.html" style="color:white;text-decoration:none;">Services</a>
+        <a href="membership.html" style="color:white;text-decoration:none;">Membership</a>
+        <a href="successstories.html" style="color:white;text-decoration:none;">Success Stories</a>
+        <a href="login2.html" style="color:white;text-decoration:none;">Login</a>
+
+    </nav>
+
+    <!-- THREE DOTS BUTTON (MOBILE) -->
+    <button id="menuBtn"
+    onclick="toggleMobileMenu()"
+    style="display:none; background:none; border:none; color:white; font-size:32px; cursor:pointer;">
+        ⋮
+    </button>
+
+</header>
+
+<!-- MOBILE DROPDOWN MENU -->
+<div id="mobileMenu"
+style="display:none; position:fixed; top:120px; left:0; width:100%;
+background:#e83e8c; z-index:9999; padding:10px 0;">
+</div>
+
+<script>
+function toggleMobileMenu() {
+    var menu = document.getElementById("mobileMenu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+function handleResize() {
+
+    var mainNav = document.getElementById("mainNav");
+    var topNav = document.getElementById("topNav");
+    var menuBtn = document.getElementById("menuBtn");
+    var mobileMenu = document.getElementById("mobileMenu");
+
+    var isWrapped = mainNav.offsetHeight > 40;  // NAV WRAPPED INTO 2 ROWS
+
+    if (window.innerWidth <= 900 || isWrapped) {
+
+        /* hide desktop nav */
+        mainNav.style.display = "none";
+        topNav.style.display = "none";
+
+        /* show 3 dots button */
+        menuBtn.style.display = "block";
+
+        /* load all nav items inside dropdown */
+        mobileMenu.innerHTML = mainNav.innerHTML + topNav.innerHTML;
+
+        /* style mobile links */
+        Array.from(mobileMenu.querySelectorAll("a")).forEach(a => {
+            a.style.display = "block";
+            a.style.textAlign = "center";
+            a.style.padding = "12px 0";
+            a.style.borderBottom = "1px solid white";
+            a.style.fontSize = "18px";
+            a.style.color = "white";
+            a.style.textDecoration = "none";
+        });
+
+    } else {
+
+        /* desktop layout */
+        mainNav.style.display = "flex";
+        topNav.style.display = "flex";
+        menuBtn.style.display = "none";
+        mobileMenu.style.display = "none";
+    }
+}
+
+window.addEventListener("resize", handleResize);
+window.addEventListener("DOMContentLoaded", handleResize);
+</script>
+
+ 
+ 
+ 
+ 
+ 
+ 
+  <div style="width: 380px; background: rgba(255, 255, 255, 0.95); padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);">
+    <h2 style="text-align: center; color: #ff3366; margin-bottom: 20px; font-size: 24px;">Login</h2>
+    
+    <form id="loginForm">
+      <label style="font-weight: bold; color: #333;">Email:</label><br>
+      <input type="email" name="email" required style="width: 100%; padding: 12px; margin: 8px 0 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box;"><br>
+
+      <label style="font-weight: bold; color: #333;">Password:</label><br>
+      <input type="password" name="password" required style="width: 100%; padding: 12px; margin: 8px 0 20px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box;"><br>
+
+      <button type="submit" style="width: 100%; background: #28a745; color: #fff; padding: 12px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; transition: 0.3s;">
+        Login
+      </button>
+    </form>
+
+    <p id="loginMsg" style="text-align: center; margin-top: 15px; font-weight: bold;"></p>
+
+    <!-- Extra Buttons -->
+    <div style="margin-top: 20px; display: flex; justify-content: space-between;">
+      <button onclick="window.location.href='createprofile.html'" 
+        style="background: #007bff; color: #fff; padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; width: 48%; transition: 0.3s;">
+        Register
+      </button>
+      <button onclick="window.location.href='forgot.html'" 
+        style="background: #ffc107; color: #333; padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; width: 48%; transition: 0.3s;">
+        Forgot Password
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const res = await fetch("http://localhost:5000/api/login3", {
+          method: "POST",
+          credentials: 'include',
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+        const msg = document.getElementById("loginMsg");
+
+        if (result.success) {
+          msg.style.color = "green";
+          msg.innerText = "✅ Login Successful! Welcome " + result.user.firstName;
+          setTimeout(() => {
+            window.location.href = "index.html"; // redirect after success
+          }, 1500);
+        } else {
+          msg.style.color = "red";
+          msg.innerText = "❌ " + result.message;
+        }
+      } catch (err) {
+        console.error("Login error:", err);
+        document.getElementById("loginMsg").style.color = "red";
+        document.getElementById("loginMsg").innerText = "Server error. Please try again.";
+      }
+    });
+  </script>
+
+</body>
+</html>

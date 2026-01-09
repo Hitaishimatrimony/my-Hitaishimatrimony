@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4jodi Matrimony - Find Your Perfect Life Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; color: #333; background-color: #f9f9f9;width: 100%;">
+  
+
+
+ <!-- Enhanced Navigation Bar -->
+    <nav style="position: fixed; top: 0; left: 0; width: 100%; background: linear-gradient(to right, #00FA9A, #00CD66); z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <!-- Top Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,0.3);">
+            <!-- Logo/Brand -->
+            <div style="display: flex; align-items: center;">
+                <div style="background: #8B0000; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-weight: bold; font-size: 20px;">
+                    H
+                </div>
+                <span style="font-weight: bold; font-size: 20px; color: #8B0000;">Hitaishi Matrimony</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="desktop-menu" style="display: flex; align-items: center; gap: 25px;">
+                <div style="display: flex; gap: 15px;">
+                    <a href="tel:9908793602" style="display: flex; align-items: center; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;" onmouseenter="this.style.color='#8B0000'" onmouseleave="this.style.color='#333'">
+                        <i class="fas fa-phone-alt" style="color: #8B0000; margin-right: 5px;"></i>
+                        <span>9908793602</span>
+                    </a>
+                    <a href="mailto:hitaishimatrimony@gmail.com" style="display: flex; align-items: center; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;" onmouseenter="this.style.color='#8B0000'" onmouseleave="this.style.color='#333'">
+                        <i class="fas fa-envelope" style="color: #8B0000; margin-right: 5px;"></i>
+                        <span>Hitaishimatrimony@gmail.com</span>
+                    </a>
+                </div>
+                
+                <a href="login2.html" class="desktop-profile-btn" style="background: #8B0000; color: white; padding: 8px 20px; text-decoration: none; border-radius: 30px; font-weight: bold; transition: all 0.3s; box-shadow: 0 2px 5px rgba(139,0,0,0.3);" onmouseenter="this.style.background='#A52A2A'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(139,0,0,0.4)'" onmouseleave="this.style.background='#8B0000'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(139,0,0,0.3)'">
+                  Login
+                </a>
+            </div>
+            
+            <!-- Mobile Right Section -->                   
+            <div class="mobile-right" style="display: none; align-items: center; gap: 15px;">
+                <a href="createprofile.html" class="mobile-profile-btn" style="background: #8B0000; color: white; padding: 6px 15px; text-decoration: none; border-radius: 20px; font-weight: bold; font-size: 14px; transition: all 0.3s; box-shadow: 0 2px 5px rgba(139,0,0,0.3);" onmouseenter="this.style.background='#A52A2A'; this.style.transform='scale(1.05)'" onmouseleave="this.style.background='#8B0000'; this.style.transform='scale(1)'">
+                    Create Profile
+                </a>
+                
+                <button id="menuToggle" style="background: none; border: none; font-size: 24px; color: #8B0000; cursor: pointer;">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Bottom Bar with Social Links -->
+        <!-- <div class="desktop-menu" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+            <div style="display: flex; align-items: center;">
+                <i class="fas fa-map-marker-alt" style="color: #8B0000; margin-right: 8px;"></i>
+                <span style="color: #333;">Hyderabad, Mumbai, Delhi, Bangalore</span>
+            </div>
+            
+            <div style="display: flex; gap: 20px;">
+                <a href="https://www.whatsapp.com/" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#25D366'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/hitaishi-matrimony" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#0077B5'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/hita.ishimatrimony/?hl=en" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#E1306C'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@Hitaishimatrimony" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#FF0000'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://x.com/matrimonyhitais" style="color: #8B0000; font-size: 22px; transition: all 0.3s;" onmouseenter="this.style.color='#1DA1F2'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div> -->
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" style="display: none; background: white; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- Contact Info -->
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <div style="display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <i class="fas fa-map-marker-alt" style="color: #8B0000; width: 30px; font-size: 18px;"></i>
+                        <span>Hyderabad, Mumbai, Delhi, Bangalore</span>
+                    </div>
+                    <a href="tel:9908793602" style="display: flex; align-items: center; text-decoration: none; color: #333; padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <i class="fas fa-phone-alt" style="color: #8B0000; width: 30px; font-size: 18px;"></i>
+                        <span>9908793602</span>
+                    </a>
+                    <a href="mailto:opticjodi@gmail.com" style="display: flex; align-items: center; text-decoration: none; color: #333; padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <i class="fas fa-envelope" style="color: #8B0000; width: 30px; font-size: 18px;"></i>
+                        <span>opticjodi@gmail.com</span>
+                    </a>
+                </div>
+                
+                <!-- Social Links -->
+                <div>
+                    <h3 style="color: #8B0000; margin-bottom: 15px; font-size: 18px;">Follow Us</h3>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="https://www.whatsapp.com/" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#25D366'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hitaishi-matrimony" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#0077B5'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/hita.ishimatrimony/?hl=en" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#E1306C'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Hitaishimatrimony" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#FF0000'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://x.com/matrimonyhitais" style="color: #8B0000; font-size: 28px; transition: all 0.3s;" onmouseenter="this.style.color='#1DA1F2'; this.style.transform='scale(1.2)'" onmouseleave="this.style.color='#8B0000'; this.style.transform='scale(1)'">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const desktopMenu = document.querySelectorAll('.desktop-menu');
+            const desktopProfileBtn = document.querySelector('.desktop-profile-btn');
+            const mobileRight = document.querySelector('.mobile-right');
+            
+            // Function to check screen size and toggle menu visibility
+            function checkScreenSize() {
+                if (window.innerWidth <= 768) {
+                    // Mobile view
+                    mobileRight.style.display = 'flex';
+                    desktopMenu.forEach(el => {
+                        el.style.display = 'none';
+                    });
+                    desktopProfileBtn.style.display = 'none';
+                } else {
+                    // Desktop view
+                    mobileRight.style.display = 'none';
+                    mobileMenu.style.display = 'none';
+                    desktopMenu.forEach(el => {
+                        el.style.display = 'flex';
+                    });
+                    desktopProfileBtn.style.display = 'block';
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+            
+            // Toggle mobile menu
+            menuToggle.addEventListener('click', function() {
+                if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+                    mobileMenu.style.display = 'block';
+                    menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    mobileMenu.style.display = 'none';
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+            
+            // Initialize on page load
+            checkScreenSize();
+            
+            // Update on window resize
+            window.addEventListener('resize', checkScreenSize);
+        });
+    </script>
+
+<header id="mainHeader"
+style="position: fixed; top: 55px; left: 0; width: 100%; background: #e83e8c; color: white;
+padding: 10px 20px; z-index: 1000; display: flex; align-items: center; justify-content: space-between;
+box-sizing: border-box; flex-wrap: nowrap;">
+
+    <!-- LOGO -->
+    <div style="flex:0 0 auto; display:flex; align-items:center;">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo"
+            style="height:60px; width:auto; max-width:100%; object-fit:contain;">
+        </a>
+    </div>
+
+    <!-- TITLE + MAIN NAV -->
+    <div style="flex:1; min-width:0; padding:0 20px; display:flex; flex-direction:column;">
+
+        <!-- TITLE -->
+<h1 style="margin:0; font-size:clamp(22px, 2vw, 48px); color:white; white-space:nowrap;">
+        overflow:hidden; text-overflow:ellipsis;">
+            Welcome to 4jodi Matrimony
+        </h1>
+
+        <span style="font-size:12px; background:red; padding:2px 6px; width:max-content;
+        border-radius:10px;">
+            Trusted since 2023
+        </span>
+
+        <!-- MAIN NAVIGATION -->
+        <nav id="mainNav"
+        style="display:flex; flex-wrap:wrap; gap:20px; padding-top:8px;">
+
+            <a href="index.html" style="color:white;text-decoration:none;font-size:16px;">Home</a>
+            <a href="male2.html" style="color:white;text-decoration:none;font-size:16px;">Male</a>
+            <a href="female.html" style="color:white;text-decoration:none;font-size:16px;">Female</a>
+            <a href="communityconnect.html" style="color:white;text-decoration:none;font-size:16px;">Community</a>
+            <a href="dating.html" style="color:white;text-decoration:none;font-size:16px;">Dating</a>
+            <a href="co-living.html" style="color:white;text-decoration:none;font-size:16px;">Co-living</a>
+            <a href="friendship.html" style="color:white;text-decoration:none;font-size:16px;">Friendship</a>
+            <a href="secondmarriage.html" style="color:white;text-decoration:none;font-size:16px;">Second marriage</a>
+            <a href="widows.html" style="color:white;text-decoration:none;font-size:16px;">Widows</a>
+            <a href="marriage affiliate.html" style="color:white;text-decoration:none;font-size:16px;">Marriage Affiliates</a>
+            <a href="marriage broker.html" style="color:white;text-decoration:none;font-size:16px;">Marriage Brokers</a>
+
+        </nav>
+    </div>
+
+    <!-- TOP RIGHT NAV -->
+    <nav id="topNav"
+    style="flex:0 0 auto; display:flex; gap:20px;">
+
+        <a href="nri2.html" style="color:white;text-decoration:none;">NRI</a>
+        <a href="contactus.html" style="color:white;text-decoration:none;">Contact</a>
+        <a href="services2.html" style="color:white;text-decoration:none;">Services</a>
+        <a href="membership.html" style="color:white;text-decoration:none;">Membership</a>
+        <a href="successstories.html" style="color:white;text-decoration:none;">Success Stories</a>
+        <a href="login2.html" style="color:white;text-decoration:none;">Login</a>
+
+    </nav>
+
+    <!-- THREE DOTS BUTTON (MOBILE) -->
+    <button id="menuBtn"
+    onclick="toggleMobileMenu()"
+    style="display:none; background:none; border:none; color:white; font-size:32px; cursor:pointer;">
+        ⋮
+    </button>
+
+</header>
+
+<!-- MOBILE DROPDOWN MENU -->
+<div id="mobileMenu"
+style="display:none; position:fixed; top:120px; left:0; width:100%;
+background:#e83e8c; z-index:9999; padding:10px 0;">
+</div>
+
+<script>
+function toggleMobileMenu() {
+    var menu = document.getElementById("mobileMenu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+function handleResize() {
+
+    var mainNav = document.getElementById("mainNav");
+    var topNav = document.getElementById("topNav");
+    var menuBtn = document.getElementById("menuBtn");
+    var mobileMenu = document.getElementById("mobileMenu");
+
+    var isWrapped = mainNav.offsetHeight > 40;  // NAV WRAPPED INTO 2 ROWS
+
+    if (window.innerWidth <= 900 || isWrapped) {
+
+        /* hide desktop nav */
+        mainNav.style.display = "none";
+        topNav.style.display = "none";
+
+        /* show 3 dots button */
+        menuBtn.style.display = "block";
+
+        /* load all nav items inside dropdown */
+        mobileMenu.innerHTML = mainNav.innerHTML + topNav.innerHTML;
+
+        /* style mobile links */
+        Array.from(mobileMenu.querySelectorAll("a")).forEach(a => {
+            a.style.display = "block";
+            a.style.textAlign = "center";
+            a.style.padding = "12px 0";
+            a.style.borderBottom = "1px solid white";
+            a.style.fontSize = "18px";
+            a.style.color = "white";
+            a.style.textDecoration = "none";
+        });
+
+    } else {
+
+        /* desktop layout */
+        mainNav.style.display = "flex";
+        topNav.style.display = "flex";
+        menuBtn.style.display = "none";
+        mobileMenu.style.display = "none";
+    }
+}
+
+window.addEventListener("resize", handleResize);
+window.addEventListener("DOMContentLoaded", handleResize);
+</script>
+    <!-- Hero Section -->
+ <section style="background:url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;height:60vh;display:flex;align-items:center;position:relative; margin-top:160px;">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);"></div>
+        <div style="max-width:1200px;margin:0 auto;padding:2rem;position:relative;z-index:1;color:white;">
+            <h1 style="font-size:3.5rem;margin-bottom:1rem;text-shadow:2px 2px 4px rgba(0,0,0,0.5);">Real Love Stories</h1>
+            <p style="font-size:1.5rem;max-width:800px;text-shadow:1px 1px 2px rgba(0,0,0,0.5);">Discover inspiring stories from couples who found their perfect match through Hitiashi Matrimony</p>
+        </div>
+  </section>
+
+    <!-- Main Content -->
+ <main style="max-width:1200px;margin:2rem auto;padding:0 1rem;">
+
+
+        <!-- Featured Story -->
+ <section style="width:80%;margin:3rem auto;background:white;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform 0.3s ease;" 
+    onmouseover="this.style.transform='translateY(-5px)'" 
+    onmouseout="this.style.transform='none'">
+
+    <div style="display:flex;flex-wrap:wrap;">
+        
+        <!-- Text Column -->
+        <div style="flex:1;min-width:300px;padding:2rem;">
+            <h2 style="color:#e83e8c;font-size:2rem;margin-bottom:1rem;">Featured Success Story</h2>
+            <h3 style="font-size:1.5rem;margin-bottom:1rem;">Priya & Rajesh - A Match Made in Heaven</h3>
+            <p style="margin-bottom:1.5rem;color:#555;line-height:1.6;">
+                "We were both skeptical about online matrimony, but Hitiashi's detailed profiles and verification process made all the difference. Within 3 months of joining, we found each other and knew it was meant to be!"
+            </p>
+            <div style="display:flex;align-items:center;">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Priya from Mumbai" style="width:60px;height:60px;border-radius:50%;margin-right:1rem;border:3px solid #e83e8c;">
+                <div>
+                    <p style="font-weight:600;margin:0;">Priya & Rajesh</p>
+                    <p style="margin:0;color:#777;font-size:0.9rem;">Married December 2022, Mumbai</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Image Column -->
+ <div style="flex:1;min-width:300px;background:url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;min-height:300px;transition:all 0.4s ease;filter:brightness(0.95);" 
+     onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+     onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+      </div>
+    
+    </div>
+  </section>
+
+
+ <!-- Success Stories Section -->
+<section id="success-stories" style="padding:80px 10%;background-color:#f9f7fe;display:flex;justify-content:center;">
+  <div style="width:80%;max-width:1400px;margin:0 auto;">
+    <h2 style="text-align:center;font-size:2.5rem;margin-bottom:3rem;color:#6e48aa;position:relative;padding-bottom:15px;">
+      <span style="display:inline-block;position:relative;">Success Stories
+        <span style="position:absolute;bottom:-5px;left:0;width:100%;height:3px;background:linear-gradient(90deg,#6e48aa,#ffd700);"></span>
+      </span>
+    </h2>
+    
+    <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:40px;width:100%;">
+
+      <!-- Story 1 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage1.png" alt="Anjali and Vikram wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.5s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(110,72,170,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Anjali & Vikram</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"We connected instantly through Hitiashi's compatibility matching."</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#6e48aa;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">March 2023 | Delhi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 2 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage2.png" alt="Sneha and Arun wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.5s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(157,80,187,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Sneha & Arun</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"After years of searching, we found each other within weeks on Hitiashi."</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#9d50bb;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">August 2022 | Bangalore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 3 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage3.png" alt="Meera and Karthik wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.5s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(255,215,0,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Meera & Karthik</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"The privacy features gave us confidence to connect genuinely."</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#ffd700;color:#6e48aa;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">January 2023 | Chennai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 4 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage4.png" alt="Divya and Rohan wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.4s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(111,66,193,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Divya & Rohan</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"Hitiashi's personalized matchmaking service was perfect for us."</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#6f42c1;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">November 2022 | Hyderabad</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 5 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage5.png" alt="Pooja and Aditya wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.4s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(23,162,184,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Pooja & Aditya</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"As NRIs, we needed a platform that understood our needs."</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#17a2b8;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">September 2022 | USA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 6 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage6.png" alt="Neha and Sameer wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.4s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(108,117,125,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Neha & Sameer</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"The video profile feature helped us connect genuinely."</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#6c757d;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">December 2023 | Pune</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 7 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage7.png" alt="Rahul and Ayesha wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.4s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(220,53,69,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Rahul & Ayesha</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"We had an amazing virtual courtship thanks to Hitiashi!"</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#dc3545;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">May 2023 | Mumbai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 8 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage8.png" alt="Kavya and Aman wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.4s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(111,66,193,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Kavya & Aman</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"Our connection felt natural from the first message!"</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#6f42c1;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">April 2023 | Jaipur</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 9 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage9.png" alt="Simran and Raj wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.4s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(13,110,253,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Simran & Raj</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"Our journey from strangers to soulmates began here."</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#0d6efd;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">December 2023 | Lucknow</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 10 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage10.png" alt="Riya and Aarav wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.4s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(255,87,34,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Riya & Aarav</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"We found a best friend and life partner in each other."</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#ff5722;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">February 2024 | Ahmedabad</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 11 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage11.png" alt="Priya and Nikhil wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.4s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(253,126,20,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Priya & Nikhil</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"Hitiashi brought us together across continents!"</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#fd7e14;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">June 2024 | Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 12 -->
+      <div style="background:white;border-radius:12px;overflow:hidden;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(110,72,170,0.1);position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 35px rgba(110,72,170,0.2)'" 
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.1)'">
+        <div style="position:relative;overflow:hidden;">
+          <img loading="lazy" src="images/vmsimage12.png" alt="Shruti and Vikas wedding" 
+               style="width:100%;height:280px;object-fit:cover;transition:all 0.4s ease;filter:brightness(0.95);" 
+               onmouseover="this.style.transform='scale(1.05)';this.style.filter='brightness(1)'" 
+               onmouseout="this.style.transform='scale(1)';this.style.filter='brightness(0.95)'">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(138,43,226,0.7));padding:20px;">
+            <h3 style="font-size:1.4rem;margin:0;color:white;text-shadow:1px 1px 3px rgba(0,0,0,0.5);">Shruti & Vikas</h3>
+          </div>
+        </div>
+        <div style="padding:25px;text-align:center;">
+          <p style="color:#555;margin-bottom:1.2rem;font-size:1.1rem;line-height:1.6;">"Our love story blossomed with Hitiashi's guidance."</p>
+          <div style="display:flex;justify-content:center;align-items:center;">
+            <span style="background-color:#8a2be2;color:white;padding:6px 15px;border-radius:20px;font-size:0.9rem;font-weight:500;">August 2024 | Kolkata</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- View More Button -->
+    <div style="text-align:center;margin-top:50px;">
+      <a href="#" style="display:inline-block;background:linear-gradient(135deg,#6e48aa,#9d50bb);color:white;padding:12px 35px;border-radius:30px;text-decoration:none;font-weight:600;font-size:1.1rem;transition:all 0.3s ease;box-shadow:0 5px 15px rgba(110,72,170,0.3);" 
+         onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 25px rgba(110,72,170,0.4)'" 
+         onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 5px 15px rgba(110,72,170,0.3)'">View More Success Stories</a>
+    </div>
+  </div>
+ </section>
+        <!-- Testimonials Section -->
+<section style="margin:4rem auto;background:linear-gradient(135deg,#6f42c1,#e83e8c);padding:3rem;border-radius:10px;color:white;width:80%;overflow-x:auto;">
+    <h2 style="text-align:center;font-size:2rem;margin-bottom:2rem;">What Couples Say</h2>
+    <div style="display:flex;gap:2rem;flex-wrap:nowrap;min-width:100%;overflow-x:auto;">
+        <div style="flex:0 0 30%;background:rgba(255,255,255,0.1);padding:1.5rem;border-radius:8px;backdrop-filter:blur(5px);transition:transform 0.3s ease;min-width:280px;height: 170px;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='none'">
+            <p style="font-style:italic;margin-bottom:1rem;">"Hitiashi's team was incredibly supportive throughout our journey. They went above and beyond to ensure we had a genuine connection."</p>
+            <p style="font-weight:600;">- Aishwarya & Ravi</p>
+        </div>
+        <div style="flex:0 0 30%;background:rgba(255,255,255,0.1);padding:1.5rem;border-radius:8px;backdrop-filter:blur(5px);transition:transform 0.3s ease;min-width:280px;height: 170px;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='none'">
+            <p style="font-style:italic;margin-bottom:1rem;">"We appreciated the cultural understanding Hitiashi brought to matchmaking. They respected our traditions while finding modern matches."</p>
+            <p style="font-weight:600;">- Priyanka & Ankit</p>
+        </div>
+        <div style="flex:0 0 30%;background:rgba(255,255,255,0.1);padding:1.5rem;border-radius:8px;backdrop-filter:blur(5px);transition:transform 0.3s ease;min-width:280px;height: 170px;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='none'">
+            <p style="font-style:italic;margin-bottom:1rem;">"After trying multiple platforms, Hitiashi was the one that actually delivered quality matches with verified profiles."</p>
+            <p style="font-weight:600;">- Swati & Rohit</p>
+        </div>
+        <div style="flex:0 0 30%;background:rgba(255,255,255,0.1);padding:1.5rem;border-radius:8px;backdrop-filter:blur(5px);transition:transform 0.3s ease;min-width:280px;height: 170px;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='none'">
+            <p style="font-style:italic;margin-bottom:1rem;">"Thanks to Hitiashi, we found each other when we least expected it. The personal touch made a big difference."</p>
+            <p style="font-weight:600;">- Meena & Harsh</p>
+        </div>
+        <div style="flex:0 0 30%;background:rgba(255,255,255,0.1);padding:1.5rem;border-radius:8px;backdrop-filter:blur(5px);transition:transform 0.3s ease;min-width:280px;height: 170px;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='none'">
+            <p style="font-style:italic;margin-bottom:1rem;">"We matched in just two weeks! Hitiashi gave us the platform and privacy we needed for serious commitment."</p>
+            <p style="font-weight:600;">- Ritu & Devansh</p>
+        </div>
+        <div style="flex:0 0 30%;background:rgba(255,255,255,0.1);padding:1.5rem;border-radius:8px;backdrop-filter:blur(5px);transition:transform 0.3s ease;min-width:280px;height: 170px;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='none'">
+            <p style="font-style:italic;margin-bottom:1rem;">"Their verification system ensured trust. We didn’t just meet—we built a lasting bond. Thank you, Hitiashi!"</p>
+            <p style="font-weight:600;">- Neha & Saurabh</p>
+        </div>
+    </div>
+ </section>
+
+
+        <!-- CTA Section -->
+<section style="text-align:center;margin:4rem 0;padding:3rem;background:white;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="font-size:2rem;margin-bottom:1rem;color:#6f42c1;">Ready to Find Your Perfect Match?</h2>
+            <p style="font-size:1.2rem;margin-bottom:2rem;max-width:800px;margin-left:auto;margin-right:auto;color:#555;">Join thousands of singles who found love through Hitiashi Matrimony</p>
+            <a href="/register" style="display:inline-block;background:linear-gradient(135deg,#e83e8c,#6f42c1);color:white;padding:1rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:1.1rem;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(111,66,193,0.3);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 7px 20px rgba(111,66,193,0.4)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 15px rgba(111,66,193,0.3)'">Create Your Profile Now</a>
+  </section>
+  
+ </main>
+
+     <!-- Footer -->
+<footer style="background-color: #333; color: white; padding: 50px 0 20px;">
+  <div style="width: 85%; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: nowrap; gap: 30px; margin-bottom: 40px;">
+      
+      
+      <!-- Column 1 -->
+    <div style="flex: 1; min-width: 0;">
+     <h3 style="color: #e83e8c; margin-top: 0;">4jodi Matrimony</h3>
+       <p style="margin-bottom: 20px;">India's most trusted matrimony service helping millions find their perfect life partners since 2024.</p>
+        <div style="display: flex; gap: 10px; flex-wrap: nowrap; align-items: center;">
+         <a href="https://www.facebook.com" target="_blank" style="display: inline-flex; justify-content: center; align-items: center; background-color: #444; border-radius: 50%; width: 40px; height: 40px; text-decoration: none;">
+        <img src="https://img.icons8.com/ios-filled/25/ffffff/facebook-new.png" alt="Facebook" style="display: block; width: 25px; height: 25px;">
+       </a>
+       <a href="https://www.linkedin.com" target="_blank" style="display: inline-flex; justify-content: center; align-items: center; background-color: #444; border-radius: 50%; width: 40px; height: 40px; text-decoration: none;">
+        <img src="https://img.icons8.com/ios-filled/25/ffffff/linkedin.png" alt="LinkedIn" style="display: block; width: 25px; height: 25px;">
+       </a>
+       <a href="https://x.com/matrimonyhitais" target="_blank" style="display: inline-flex; justify-content: center; align-items: center; background-color: #444; border-radius: 50%; width: 40px; height: 40px; text-decoration: none;">
+      <img src="https://img.icons8.com/ios-filled/25/ffffff/twitter.png" alt="Twitter" style="display: block; width: 25px; height: 25px;">
+      </a>
+       <a href="https://www.instagram.com" target="_blank" style="display: inline-flex; justify-content: center; align-items: center; background-color: #444; border-radius: 50%; width: 40px; height: 40px; text-decoration: none;">
+      <img src="https://img.icons8.com/ios-filled/25/ffffff/instagram-new.png" alt="Instagram" style="display: block; width: 25px; height: 25px;">
+     </a>
+    </div>
+   </div>
+
+      <!-- Column 2 -->
+      <div style="flex: 1; min-width: 0;">
+        <h4 style="margin-top: 0; margin-bottom: 20px;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Home</a></li>
+          <li style="margin-bottom: 10px;"><a href="form2.html" style="color: #ccc; text-decoration: none;">Search Profiles</a></li>
+          <li style="margin-bottom: 10px;"><a href="membership.html" style="color: #ccc; text-decoration: none;">Membership Plans</a></li>
+          <li style="margin-bottom: 10px;"><a href="viewmorestories.html" style="color: #ccc; text-decoration: none;">Success Stories</a></li>
+          <li style="margin-bottom: 10px;"><a href="contactus.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div style="flex: 1; min-width: 0;">
+        <h4 style="margin-top: 0; margin-bottom: 20px;">Help & Support</h4>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none;">FAQs</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Safety Tips</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Terms & Conditions</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Grievance Redressal</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+    <div style="flex: 1; min-width: 0;">
+     <h4 style="margin-top: 0; margin-bottom: 20px;">Contact Us</h4>
+     <p style="margin-bottom: 10px;">📞 +91 9908793602</p>
+      <p style="margin-bottom: 10px; white-space: nowrap;">✉️ opticjodi@gmail.com</p>
+      <p style="margin-bottom: 10px;">🏢  pragathi nagar, hyderabad, India - 500090</p>
+       </div>
+
+    </div>
+
+    <div style="border-top: 1px solid #444; padding-top: 20px; text-align: center; color: #999; font-size: 14px;">
+      <p>© 2024 4jodi Matrimony. All Rights Reserved.</p>
+    </div>
+  </div>
+ </footer>
+ 
+</body>
+</html>

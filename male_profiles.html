@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Male Profiles</title>
+    <style>
+        body { font-family: Arial; background:#f4f4f4; padding:20px; }
+        h2 { text-align:center; color:#3399ff; }
+        .container { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+        .card {
+            width:260px; background:white; padding:15px;
+            border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15);
+            cursor:pointer;
+        }
+        .card img {
+            width:100%; height:180px; object-fit:cover; border-radius:6px;
+        }
+        .name { font-size:18px; font-weight:bold; color:#3399ff; }
+        .info { font-size:14px; margin:4px 0; }
+    </style>
+</head>
+
+<body>
+
+<h2>Male Profiles</h2>
+
+<div class="container" id="profiles"></div>
+
+<script>
+// LOAD MALE PROFILES
+async function loadMale() {
+    const res = await fetch("http://localhost:5000/api/profiles/male");
+    const result = await res.json();
+
+    const box = document.getElementById("profiles");
+
+    result.data.forEach(p => {
+        let img = p.profileImage?.length > 50 
+            ? p.profileImage 
+            : "https://via.placeholder.com/260x180?text=No+Image";
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+            <img src="${img}">
+            <p class="name">${p.firstName} ${p.lastName}</p>
+            <p class="info"><b>Age:</b> ${p.dob}</p>
+            <p class="info"><b>Mobile:</b> ${p.mobile}</p>
+            <p class="info"><b>Profession:</b> ${p.profession}</p>
+        `;
+
+        card.onclick = () => {
+            window.location.href = `single_profile.html?id=${p.id}`;
+        };
+
+        box.appendChild(card);
+    });
+}
+
+loadMale();
+</script>
+<script>
+async function sendInterest(sender, receiver) {
+    if (!sender) {
+        alert("Please login to send interest.");
+        return;
+    }
+
+    const res = await fetch("http://localhost:5000/api/send-interest", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sender_id: sender, receiver_id: receiver })
+    });
+
+    const data = await res.json();
+
+    alert(data.message);
+}
+</script>
+
+
+</body>
+</html>
